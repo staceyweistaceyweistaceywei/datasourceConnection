@@ -41,6 +41,7 @@ public class DatasourceConnectionApplicationTests {
             t.start();
 		}
 
+		// 因为线程一部执行，主线程执行得比较快所以需要让主线程睡眠几秒，自己new的线程才有机会全部执行
         try {
             System.out.println("主线程睡眠8秒");
             Thread.sleep(8000);
